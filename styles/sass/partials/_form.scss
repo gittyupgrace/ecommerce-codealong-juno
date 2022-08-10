@@ -1,0 +1,57 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 50px;
+}
+
+input, 
+select, 
+textarea {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+    color: $primary;
+    @include fontSize(16);
+
+    &::placeholder {
+        opacity: 1;
+    }
+
+    &:hover, 
+    &:focus {
+        border-color: $primary;
+    }
+}
+
+textarea {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+select {
+    appearance: none;
+    background-color: $solidWhite;
+    background-image: url(../assets/caret-down-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 97% center;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    @include fontSize(16);
+
+    input {
+        margin-right: 10px;
+        accent-color: $primary;
+    }
+
+    a {
+        font-weight: 600;
+        text-decoration: underline;
+    }
+}
